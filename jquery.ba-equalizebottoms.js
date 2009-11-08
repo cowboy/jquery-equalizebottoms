@@ -35,7 +35,7 @@
 // tested with and what browsers it has been tested in.
 // 
 // jQuery Versions - 1.3.2
-// Browsers Tested - Internet Explorer 6-8, Firefox 3, Safari 3-4, Chrome, Opera 9.
+// Browsers Tested - Internet Explorer 6-8, Firefox 2-3.6, Safari 3-4, Chrome, Opera 9.6-10.
 // 
 // About: Release History
 // 
@@ -58,7 +58,8 @@
   // 
   //  bottom - (Number) An optional bottom y position to force selected element
   //    bottoms to. If omitted, bottom is computed automatically by measuring
-  //    height of all selected elements and choosing the bottom-most bottom.
+  //    height of all selected elements and choosing the bottom-most bottom. You
+  //    will probably never, ever use this.
   // 
   // Returns:
   // 

@@ -26,7 +26,7 @@ tested with and what browsers it has been tested in.
 1.3.2
 
 ### Browsers Tested ###
-Internet Explorer 6-8, Firefox 3, Safari 3-4, Chrome, Opera 9.
+Internet Explorer 6-8, Firefox 2-3.6, Safari 3-4, Chrome, Opera 9.6-10.
 
 
 ## Release History ##
