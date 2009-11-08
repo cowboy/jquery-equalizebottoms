@@ -1,7 +1,7 @@
 # jQuery equalizeBottoms #
 [http://benalman.com/projects/jquery-equalizebottoms-plugin/](http://benalman.com/projects/jquery-equalizebottoms-plugin/)
 
-Version: 1.3, Date: 4/4/2009
+Version: 1.4, Date: 11/7/2009
 
 With jQuery equalizeBottoms you can "equalize" the bottoms of multiple elements, making columns heights even, even when CSS refuses to help.
 
@@ -31,7 +31,8 @@ Internet Explorer 6-8, Firefox 3, Safari 3-4, Chrome, Opera 9.
 
 ## Release History ##
 
-1.3 - (4/4/2009) Initial release
+1.4 - (11/6/2009) Removed polling functionality. If you need polling, use in combination with [jQuery doTimeout](http://benalman.com/projects/jquery-dotimeout-plugin/).  
+1.3 - (4/4/2009)  Initial release
 
 
 ## License ##
