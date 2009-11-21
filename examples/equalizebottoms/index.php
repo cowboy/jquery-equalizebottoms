@@ -152,6 +152,7 @@ ob_end_clean();
 
 ob_start();
 ?>
+<?= $shell['donate'] ?>
 
 <p>
   With <a href="http://benalman.com/projects/jquery-equalizebottoms-plugin/">jQuery equalizeBottoms</a> you can
