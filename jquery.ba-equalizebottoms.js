@@ -1,24 +1,24 @@
 /*!
- * jQuery equalizeBottoms - v1.4 - 11/7/2009
+ * jQuery equalizeBottoms - v1.5 - 3/23/2010
  * http://benalman.com/projects/jquery-equalizebottoms-plugin/
  * 
- * Copyright (c) 2009 "Cowboy" Ben Alman
+ * Copyright (c) 2010 "Cowboy" Ben Alman
  * Dual licensed under the MIT and GPL licenses.
  * http://benalman.com/about/license/
  */
 
 // Script: jQuery equalizeBottoms
 //
-// *Version: 1.4, Date: 11/7/2009*
+// *Version: 1.5, Date: 3/23/2010*
 // 
 // Project Home - http://benalman.com/projects/jquery-equalizebottoms-plugin/
 // GitHub       - http://github.com/cowboy/jquery-equalizebottoms/
 // Source       - http://github.com/cowboy/jquery-equalizebottoms/raw/master/jquery.ba-equalizebottoms.js
-// (Minified)   - http://github.com/cowboy/jquery-equalizebottoms/raw/master/jquery.ba-equalizebottoms.min.js (0.4kb)
+// (Minified)   - http://github.com/cowboy/jquery-equalizebottoms/raw/master/jquery.ba-equalizebottoms.min.js (0.5kb)
 // 
 // About: License
 // 
-// Copyright (c) 2009 "Cowboy" Ben Alman,
+// Copyright (c) 2010 "Cowboy" Ben Alman,
 // Dual licensed under the MIT and GPL licenses.
 // http://benalman.com/about/license/
 // 
@@ -34,13 +34,15 @@
 // Information about what version or versions of jQuery this plugin has been
 // tested with and what browsers it has been tested in.
 // 
-// jQuery Versions - 1.3.2, 1.4.1
+// jQuery Versions - 1.3.2, 1.4.2
 // Browsers Tested - Internet Explorer 6-8, Firefox 2-3.6, Safari 3-4, Chrome, Opera 9.6-10.1.
 // 
 // About: Release History
 // 
-// 1.4 - (11/7/2009) Removed polling functionality. If you need polling, use in
-//                   combination with jQuery doTimeout.
+// 1.5 - (3/23/2010) Changed .height measurement to .outerHeight to take
+//       padding and border into consideration.
+// 1.4 - (11/7/2009) Removed polling functionality. If you need polling, use
+//       in combination with jQuery doTimeout.
 // 1.3 - (4/4/2009) Initial release
 
 (function($) {
@@ -63,7 +65,7 @@
   // 
   // Returns:
   // 
-  //  (jQuery) The initial jQuery collection of elements.  
+  //  (jQuery) The initial jQuery collection of elements.
   
   $.fn.equalizeBottoms = function( bottom ) {
     
@@ -73,14 +75,14 @@
       // Reset height first, then get the bottom-most bottom.
       this.each(function(){
         var that = $(this).css({ height: 'auto' });
-        bottom = Math.max( bottom, that.offset().top + that.height() );
+        bottom = Math.max( bottom, that.offset().top + that.outerHeight() );
       });
     }
     
-    // Update all bottoms.
+    // Update all bottoms, taking padding and border height into consideration.
     return this.each(function(){
       var that = $(this);
-      that.height( bottom - that.offset().top );
+      that.height( bottom - that.offset().top - that.outerHeight() + that.height() );
     });
     
   };

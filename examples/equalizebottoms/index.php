@@ -122,6 +122,9 @@ lt. brown: #C4884F
   background-color: #FFAB59 !important;
 }
 
+#b { padding-top: 20px; }
+#d { padding-bottom: 20px; }
+
 .nav {
   display: block;
   margin: 0 0 0.5em;
@@ -177,7 +180,7 @@ ob_start();
     <div>
       This is the second div in column 1. Something else and then more and more and more and more and more and more and more and more and more
     </div>
-    <div class="highlight">
+    <div class="highlight" id="a">
       <span class="nav"><a href="#" class="add">add text</a> | <a href="#" class="remove">remove text</a></span>
       <strong>This is the last div in column 1, the div whose bottom shall be equalized</strong>
     </div>
@@ -190,8 +193,8 @@ ob_start();
       <span class="nav"><a href="#" class="add">add text</a> | <a href="#" class="remove">remove text</a></span>
       This is the second div in column 2. Something else and then more and more and more
     </div>
-    <div class="highlight">
-      <strong>This is the last div in column 2, the div whose bottom shall be equalized</strong>
+    <div class="highlight" id="b">
+      <strong>This is the last div in column 2, the div whose bottom shall be equalized (note the top padding)</strong>
     </div>
   </div>
 </div>
@@ -206,7 +209,7 @@ ob_start();
     <div>
       This is the second div in column 3. Something else and then more and more and more and more and more and more and more and more and more
     </div>
-    <div class="highlight">
+    <div class="highlight" id="c">
       <span class="nav"><a href="#" class="add">add text</a> | <a href="#" class="remove">remove text</a></span>
       <strong>This is the last div in column 3, the div whose bottom shall be equalized</strong>
     </div>
@@ -219,8 +222,8 @@ ob_start();
     <div>
       This is the second div in column 4. Something else and then more and more and more and more and more and more and more and more and more and more and more and more and more and more and more and more and more and more and more and more and more and more and more
     </div>
-    <div class="highlight">
-      <strong>This is the last div in column 4, the div whose bottom shall be equalized</strong>
+    <div class="highlight" id="d">
+      <strong>This is the last div in column 4, the div whose bottom shall be equalized (note the bottom padding)</strong>
     </div>
   </div>
 </div>
