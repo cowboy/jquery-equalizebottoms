@@ -75,14 +75,14 @@
       // Reset height first, then get the bottom-most bottom.
       this.each(function(){
         var that = $(this).css({ height: 'auto' });
-        bottom = Math.max( bottom, that.offset().top + that.outerHeight() );
+        bottom = Math.max( bottom, that.offset().top + that.outerHeight(false) );
       });
     }
     
     // Update all bottoms, taking padding and border height into consideration.
     return this.each(function(){
       var that = $(this);
-      that.height( bottom - that.offset().top - that.outerHeight() + that.height() );
+      that.height( bottom - that.offset().top - that.outerHeight(false) + that.height() );
     });
     
   };
